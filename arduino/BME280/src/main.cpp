@@ -1,14 +1,19 @@
 #include <Wire.h>
+#include <tools.h>
 #include "cactus_io_BME280_I2C.h"
 
 // Create the BME280 object
 BME280_I2C bme;              // I2C using default 0x77
 // or BME280_I2C bme(0x76);  // I2C using address 0x76
 
+Tools tools;
+
 void setup() {
   Serial.begin(115200);
   Serial.println("Bosch BME280 Barometric Pressure - Humidity - Temp Sensor | cactus.io");
-
+  #if 1
+    tools.waitKeypress();
+  #endif
   if (!bme.begin()) {
     Serial.println("Could not find a valid BME280 sensor, check wiring!");
     while (1);
