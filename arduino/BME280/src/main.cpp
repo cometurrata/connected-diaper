@@ -1,6 +1,6 @@
 #include <Wire.h>
 #include <tools.h>
-#include "cactus_io_BME280_I2C.h"
+#include "bme280_i2c.h"
 
 // Create the BME280 object
 BME280_I2C bme;              // I2C using default 0x77
