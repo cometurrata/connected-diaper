@@ -10,10 +10,11 @@ Tools tools;
 
 void setup() {
   Serial.begin(115200);
-  Serial.println("Bosch BME280 Barometric Pressure - Humidity - Temp Sensor | cactus.io");
+
   #if 1
     tools.waitKeypress();
   #endif
+
   if (!bme.begin()) {
     Serial.println("Could not find a valid BME280 sensor, check wiring!");
     while (1);
@@ -21,16 +22,16 @@ void setup() {
 
   bme.setTempCal(-1);
 
-  Serial.println("Pressure\tHumdity\t\tTemp\t\tTemp");
 }
 
 void loop() {
 
     bme.readSensor();
 
-    Serial.print(bme.getPressure_MB()); Serial.print("\t\t");
-    Serial.print(bme.getHumidity()); Serial.print("\t\t");
-    Serial.print(bme.getTemperature_C()); Serial.print(" *C\t");
-    Serial.print(bme.getTemperature_F()); Serial.println(" *F\t");
+    Serial.print(millis()); Serial.print(F(","));
+    Serial.print(bme.getPressure_MB()); Serial.print(F(","));
+    Serial.print(bme.getHumidity()); Serial.print(F(","));
+    Serial.print(bme.getTemperature_C()); Serial.println(F(","));
+
     delay(2000);
 }
