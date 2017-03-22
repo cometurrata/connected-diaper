@@ -12,3 +12,7 @@ I2C Address : 0x50 to 0x53
 ## MLX90614
 Thermopile.
 TODO
+
+## Communication
+Default baudrate : 115200
+Serial output must be in CSV format with a timestamp in the first column.
