@@ -11,7 +11,8 @@ I2C Address : 0x50 to 0x53
 
 ## MLX90614
 Thermopile.
-TODO
+2-Wire I2C infrared temperature sensor.
+I2C Address : 0x5A (from adafruit library code)
 
 ## Communication
 Default baudrate : 115200
