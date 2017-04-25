@@ -19,6 +19,8 @@ Default baudrate : 115200
 Serial output must be in CSV format with a timestamp in the first column.
 
 ## Data Units
-Temperature data are expressed in degrees C.
-Humity data are expressed as relative humidity.
-Pressure data are expressed in mbar.
+Temperature => Celsius (C°)
+
+Humity => relative humidity (RH)
+
+Pressure => millibar (mbar)
